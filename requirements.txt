@@ -5,3 +5,5 @@ pypdf
 PyMuPDF
 torch
 openai
+Pillow
+pytesseract
