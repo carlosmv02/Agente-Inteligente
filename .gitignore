@@ -1,0 +1,59 @@
+# Entornos virtuales
+venv/
+.venv/
+env/
+ENV/
+
+# Variables de entorno y secretos
+.env
+.env.*
+*.key
+*.pem
+
+# Cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches de herramientas
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.ipynb_checkpoints/
+
+# Base vectorial y artefactos generados
+chroma_ddr/
+pruebas/chroma_ddr/
+chunks_ddr.jsonl
+
+# Logs y salidas temporales
+*.log
+logs/
+tmp/
+temp/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+
+# Builds / paquetes
+build/
+dist/
+*.egg-info/
+
+# Docker local
+docker-compose.override.yml
+
+# Bytecode dentro de pruebas
+pruebas/__pycache__/
+pruebas/*.pyc
+
+# Resultados generados opcionales
+# Descomenta si NO quieres subir los resultados de evaluacion
+# pruebas/resultados/
