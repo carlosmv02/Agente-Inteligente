@@ -1,0 +1,36 @@
+{
+  "num_questions": 24,
+  "configured_llm_provider": "openai",
+  "configured_llm_model": "gpt-5-mini",
+  "result_llm_providers": [
+    "openai"
+  ],
+  "result_llm_models": [
+    "gpt-5-mini"
+  ],
+  "wall_time_s": 183.219,
+  "recorded_pipeline_time_s": 183.202,
+  "avg_time_per_response_s": 7.633,
+  "avg_retrieval_time_s": 0.1195,
+  "avg_generation_time_s": 7.5131,
+  "avg_answer_ground_truth_similarity": 0.8939,
+  "avg_answer_context_similarity": 0.8602,
+  "avg_ground_truth_context_similarity": 0.822,
+  "avg_same_tema_ratio": 1.0,
+  "avg_same_pdf_ratio": 0.993,
+  "same_page_hit_rate": 0.958,
+  "insufficient_context_answers": 0,
+  "insufficient_context_rate": 0.0,
+  "avg_context_count": 7.2083,
+  "avg_context_chars": 4399.6667,
+  "avg_answer_words": 102.0417,
+  "avg_prompt_tokens_ollama": null,
+  "avg_completion_tokens_ollama": null,
+  "avg_ollama_total_duration_s": null,
+  "avg_input_tokens_openai": 1955.875,
+  "avg_output_tokens_openai": 332.7917,
+  "avg_total_tokens_openai": 2288.6667,
+  "avg_cpu_user_delta_s": 0.9137,
+  "avg_cpu_system_delta_s": 0.0096,
+  "avg_rss_peak_end_mb": 1628.7879
+}

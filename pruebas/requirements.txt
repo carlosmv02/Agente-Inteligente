@@ -1,0 +1,14 @@
+chromadb
+sentence-transformers
+requests
+pypdf
+PyMuPDF
+torch
+datasets
+ragas
+langchain-ollama
+langchain-community
+psutil
+langsmith
+openai
+langchain-openai

@@ -1,0 +1,43 @@
+{
+  "num_questions": 24,
+  "configured_llm_provider": "ollama",
+  "configured_llm_model": "mistral:7b",
+  "top_k": 6,
+  "use_testset_hints": false,
+  "attach_page_context": true,
+  "generation_max_tokens": 1200,
+  "result_llm_providers": [
+    "ollama"
+  ],
+  "result_llm_models": [
+    "mistral:7b"
+  ],
+  "wall_time_s": 6780.881,
+  "recorded_pipeline_time_s": 6780.871,
+  "avg_time_per_response_s": 282.536,
+  "avg_retrieval_time_s": 0.0984,
+  "avg_generation_time_s": 282.4377,
+  "avg_answer_ground_truth_similarity": 0.8797,
+  "avg_answer_context_similarity": 0.8809,
+  "avg_ground_truth_context_similarity": 0.8287,
+  "avg_same_tema_ratio": 0.5139,
+  "avg_same_pdf_ratio": 0.4375,
+  "same_page_hit_rate": 0.458,
+  "insufficient_context_answers": 0,
+  "insufficient_context_rate": 0.0,
+  "avg_context_count": 6.0,
+  "avg_context_chars": 3804.1667,
+  "avg_answer_words": 144.9167,
+  "avg_prompt_tokens_ollama": 2677.9167,
+  "avg_completion_tokens_ollama": 299.875,
+  "avg_ollama_total_duration_s": 282.4288,
+  "avg_input_tokens_openai": null,
+  "avg_output_tokens_openai": null,
+  "avg_total_tokens_openai": null,
+  "avg_cpu_user_delta_s": 0.8079,
+  "avg_cpu_system_delta_s": 0.0117,
+  "avg_rss_peak_end_mb": 1554.2075,
+  "prompt_variant": "pedagogico_con_citas",
+  "prompt_version": "prompt-2",
+  "prompt_description": "Prompt pedagogico con citas: variante del prompt de rag_answer.py que mantiene el uso exclusivo del contexto, pero fuerza una respuesta mas desarrollada, estructurada y trazable con citas por idea o paso."
+}

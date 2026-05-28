@@ -1,0 +1,218 @@
+[
+  {
+    "question": "¿Cuál es la principal implicación que tiene la relación estrecha entre las redes y el negocio en el contexto actual de la globalización y el uso intensivo de datos?",
+    "ground_truth": "La implicación es que la infraestructura de red ya no es solo un soporte técnico, sino un componente crítico y estratégico del negocio. Esto significa que cualquier fallo o limitación en la red impacta directamente en la capacidad operativa, la continuidad y la ventaja competitiva de la empresa.",
+    "context": "TEMA 1 - DDR 2025/2026\n\nINTRODUCCIÓN\n\nLa situación actual\n\n\nRelación estrecha Red  Negocio\n\n\nGlobalización\n\n\nDeslocalización\n\n\nMúltiples sedes\n\n\nNegocios con uso intensivo de Internet\n\n\nUso Masivo de Datos\n\n\nServicios Avanzados de uso interno y externo\n\n\nAsociaciones en la cadena de producción\n\n\nAlta demandad, complejidad de gestión\n\n\nTecnologías y arquitecturas de altas prestaciones y complejidad\n\n\nMovilidad / IoT\n\n\nCloud - Data Centers / Edge / Fog\n\n\nVirtualización / 5G\n\n\nArtificial Intelligence / Autonomía",
+    "tema": "Tema 1",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema1_2526.pdf",
+    "pagina": 3
+  },
+  {
+    "question": "¿Cuál es la diferencia fundamental entre el 'Diseño de Red' y el 'Dimensionamiento' en el contexto de las redes?",
+    "ground_truth": "El Diseño de Red es la planificación general que consiste en seleccionar la combinación adecuada de tecnologías (tanto el equipo físico como el software) para lograr un objetivo de conectividad. Por otro lado, el Dimensionamiento es la fase específica dentro de ese diseño donde se eligen los parámetros exactos, como las capacidades o el ancho de banda, para asegurar que la red pueda cumplir con las prestaciones requeridas bajo la carga esperada.",
+    "context": "TEMA 1 - DDR 2025/2026\n\nINTRODUCCIÓN\n\nDefiniciones\n\nDiseño de Red: Combinación de tecnologías (hardware y software) para satisfacer unos \ndeterminados objetivos de interconectividad.\n\nHardware:\n\nDispositivos de interconexión\n\nAlmacenamiento, Servidores\n\nEnlaces\n\nSoftware:\n\nProtocolos\n\nAplicaciones\n\nDimensionado: Elegir parámetros (capacidades, etc.) de la combinación tecnologías que permitan \nunas prestaciones dadas",
+    "tema": "Tema 1",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema1_2526.pdf",
+    "pagina": 2
+  },
+  {
+    "question": "¿Cuál es el objetivo principal del Diseño y Dimensionamiento de Redes (DDR)?",
+    "ground_truth": "El objetivo principal del DDR es planificar y determinar la infraestructura de red necesaria (como el ancho de banda, el número de enlaces o el tipo de equipo) para que esta pueda soportar de manera eficiente y fiable las necesidades actuales y futuras de comunicación de una organización.",
+    "context": "TEMA 1 - DDR 2025/2026\n\nTEMA 1: INTRODUCCIÓN AL DISEÑO Y \nDIMENSIONADO\n\nDISEÑO Y DIMENSIONADO DE REDES (DDR)\n\n2025/2026\n\nProf. José Camacho\njosecamacho@ugr.es\nIngenieríaTelemática (TSTC)\n\nhttps://prado.ugr.es/",
+    "tema": "Tema 1",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema1_2526.pdf",
+    "pagina": 1
+  },
+  {
+    "question": "¿Cuál es el propósito principal de incluir la 'Teoría de Colas' en el proceso de Diseño y Planificación de Redes?",
+    "ground_truth": "La Teoría de Colas ayuda a entender y predecir el comportamiento de un sistema cuando hay recursos limitados, como la capacidad de un enlace o un dispositivo. Intuitivamente, nos permite saber cuánta espera (o congestión) habrá en un punto específico de la red bajo diferentes niveles de tráfico, ayudando a dimensionar correctamente la infraestructura para evitar cuellos de botella.",
+    "context": "TEMA 1 - DDR 2025/2026\n\nINTRODUCCIÓN\n\nDISEÑO & PLANIFICACIÓN DE REDES Y SERVICIOS\n\nINGENIERÍA DE DISEÑO \nTÉCNICAS ANALÍTICAS\n\nRAC\n\nDISEÑO & ANÁLISIS DE \nEXPERIMENTOS\n\nOPTIMIZACIÓN \nMATEMÁTICA\n\n(WHAT-IF)\nTEORÍA DE COLAS\n\nSC\nPERS \n(MIT)",
+    "tema": "Tema 1",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema1_2526.pdf",
+    "pagina": 6
+  },
+  {
+    "question": "¿Qué implica la diferencia entre la 'Lógica' y la 'Física' al caracterizar una red, según el fragmento?",
+    "ground_truth": "La característica física se refiere a los componentes tangibles de la red, como los cables y los equipos reales. En contraste, la lógica se centra en la organización conceptual y el direccionamiento de los recursos, como cómo se agrupan los usuarios o departamentos en la red, independientemente del cableado físico.",
+    "context": "TEMA 2 - DDR 2024/2025\n\nCARACTERIZACIÓN DE LA RED ACTUAL\n\nLibrary and Computing Center\n\n10-Mbps \nMetro \nEthernet to \nInternet\n\n30 Library Patrons (PCs) \n30 Macs and 60 PCs in \nComputing Center\n\nInfraestructura\n\nServer Farm\n\nLógica\n\nFísica\n\n50 PCs\n25 Macs\n50 PCs\n\nDireccionamiento y Dominios\n\nArts and \nHumanities\n\nAdministration\n\nFuncionamiento\n\nMultiGigaBit\nEthernet\n\nMath and \nSciences\n\n50 \nPCs\n30 \nPCs\n\nBusiness and Social \nSciences",
+    "tema": "Tema 2",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema2_2526.pdf",
+    "pagina": 45
+  },
+  {
+    "question": "¿Cuál es el propósito principal de analizar el ámbito de un proyecto de diseño de red?",
+    "ground_truth": "El análisis del ámbito busca establecer los límites y el alcance del proyecto, determinando si se trata de una mejora pequeña (como una VPN) o un rediseño completo, e identificando todas las áreas geográficas y las capas de la red (como LAN, WAN o inalámbrica) que deben ser consideradas, asegurando que esto sea viable con el presupuesto, el tiempo y el personal disponible.",
+    "context": "TEMA 2 - DDR 2024/2025\n\nANÁLISIS DE REQUISITOS DE NEGOCIO\n\n2. Ámbito del Proyecto de diseño\n\nIdentificar tamaño\n\nPequeño: ej. Crear una VPN para el personal de ventas\n\nGrande: ej. (re) Diseño completo de la red\n\nIdentificar funcionalidades/capas involucradas OSI\n\nIdentificar geográficamente: segmento, LAN, edificio, campus, acceso remoto, \nWAN, Wireless, red completa\n\n¿Se ajustan al ámbito: presupuesto, capacidades del personal (cliente y nuestro), \ntemporización?",
+    "tema": "Tema 2",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema2_2526.pdf",
+    "pagina": 15
+  },
+  {
+    "question": "¿Cuál es el propósito fundamental del Análisis de Requisitos de Negocio al diseñar una red?",
+    "ground_truth": "El Análisis de Requisitos de Negocio es crucial porque asegura que el diseño de la red no sea solo técnicamente viable, sino que esté directamente alineado para soportar y potenciar los objetivos y las necesidades operativas del negocio, buscando siempre mejorar la competitividad y la eficiencia general.",
+    "context": "TEMA 2 - DDR 2024/2025\n\nANÁLISIS DE REQUISITOS DE NEGOCIO\n\nContexto:\n\nDiseño de red como resultado de la demanda de negocio\n\nAbaratamiento de costes\n\nAutomatización - Autonomía\n\nReducción de costes tecnológicos\n\nGreen Data Centers\n\nVoz IP\n\nResultado: Un diseño más competitivo\n\nAnálisis de Requisitos es fundamental",
+    "tema": "Tema 2",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema2_2526.pdf",
+    "pagina": 12
+  },
+  {
+    "question": "¿Cuál es el objetivo principal de analizar la disponibilidad en el diseño y dimensionamiento de redes?",
+    "ground_truth": "El objetivo es cuantificar el tiempo que la red debe estar operativa para cumplir con los requerimientos del negocio. Esto se hace comparando el tiempo de operación deseado con el tiempo total disponible en un periodo, y es crucial porque el costo de implementar redundancia debe sopesarse contra el costo potencial de una interrupción del servicio.",
+    "context": "TEMA 2 - DDR 2024/2025\n\nANÁLISIS DE REQUISITOS TÉCNICOS\n\nDisponibilidad\n\nPorcentaje de uptime (por año, mes, semana, día u hora)\n\nEj. Operación 24/7 & 165 horas de 168 horas/semana 98.21%\n\nAlternativa: 𝐴𝐴= 𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀−𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀\n𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀\nResistencia a Desastres\nSe suele especificar por contrato (SLA)\n\nVarios dígitos decimales\n\nCuándo se aplica (¿fechas especiales?)\n\nUnidad de tiempo\nSe implanta (fundamentalmente) con redundancia\n\nMTBF\n\nMTTR\n\nAfecta significativamente al coste\n\nConfrontar coste (redundancia) con gasto por falta de disponibilidad",
+    "tema": "Tema 2",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema2_2526.pdf",
+    "pagina": 29
+  },
+  {
+    "question": "¿Cuál es el propósito principal de la formulación Flujo-Camino-Demanda (FCD) en el Diseño y Dimensionamiento de Redes?",
+    "ground_truth": "La formulación FCD es una herramienta conceptual que permite modelar cómo una demanda total de tráfico (la demanda) debe distribuirse y asignarse a rutas o caminos específicos dentro de una red, considerando la capacidad limitada de cada enlace y el costo asociado a usar esos caminos.",
+    "context": "TEMA 3 - DDR 2025/2026\n\nFORMULACIONES\n\nCambio de notación: Formulación Flujo-Camino-Demanda (FCD)\n\nFlow-Path [2], Link-Path en [1]\n\n2\n\nℎ1 = 15\nℎ3 = 10\n\nReferencia [1]\n\nℎ𝑑𝑑 : demanda (tráfico) d-ésima\n\n3\n\n1\n\nℎ2 = 20\n\n𝑃𝑃𝑑𝑑𝑑𝑑: camino (path) p-ésimo para ℎ𝑑𝑑\n\n2\n\n2\n\n𝑥𝑥𝑑𝑑𝑑𝑑: flujo de tráfico en 𝑃𝑃𝑑𝑑𝑑𝑑\n\n𝑦𝑦1 = 30\n𝑦𝑦2 = 20\n\n𝑃𝑃31\n𝑃𝑃32\n𝑃𝑃11\n\n𝑦𝑦𝑒𝑒: capacidad del enlace e-ésimo\n\n4\n\n4\n\n𝜉𝜉𝑑𝑑𝑑𝑑: coste asociado al flujo 𝑥𝑥𝑑𝑑𝑑𝑑\n\n𝑦𝑦4 = 30\n\n𝑃𝑃22\n\n𝑦𝑦3 = 20\n\n1\n\n3\n\n1\n\n3\n\n𝑦𝑦5 = 30\n\n𝑃𝑃21",
+    "tema": "Tema 3",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema3_2526.pdf",
+    "pagina": 44
+  },
+  {
+    "question": "¿Qué representa conceptualmente la 'Restricción por Capacidad' en el diseño y dimensionamiento de redes?",
+    "ground_truth": "La restricción por capacidad es el concepto que nos recuerda que ningún enlace o tubería de la red puede transportar más flujo de lo que fue diseñado para soportar. Imagínalo como una carretera: aunque necesites enviar mucho tráfico, si la carretera es estrecha, el flujo total no puede superar el límite físico de esa vía.",
+    "context": "TEMA 3 - DDR 2025/2026\n\nFORMULACIONES\n\nModificación de la notación: Notación Flujo-Camino-Demanda (FCD)\n\nRestricciones por capacidad\n\n𝛿𝛿𝑒𝑒𝑒𝑒𝑒𝑒: 1 𝑠𝑠𝑠𝑠 𝑥𝑥𝑑𝑑𝑑𝑑 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝 𝑝𝑝𝑝𝑝𝑝𝑝 el enlace e−ésimo\n0 𝑒𝑒𝑒𝑒 𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐 𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜 𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐\n\n2\n\n2\n\n𝑦𝑦1 = 30\n𝑦𝑦2 = 20\n\n𝑃𝑃31\n𝑃𝑃32\n𝑃𝑃11\n\n4\n\n4\n\n𝑦𝑦4 = 30\n\n𝑃𝑃22\n\n𝑦𝑦3 = 20\n\n1\n\n3\n\n1\n\n3\n\n𝑦𝑦5 = 30\n\n𝑃𝑃21",
+    "tema": "Tema 3",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema3_2526.pdf",
+    "pagina": 46
+  },
+  {
+    "question": "¿Cuál es el objetivo principal de la optimización de redes en el contexto del Diseño y Dimensionamiento de Redes?",
+    "ground_truth": "El objetivo principal es encontrar la mejor configuración posible para una red, es decir, la que cumpla con ciertos requisitos (como capacidad o cobertura) utilizando los recursos disponibles de la manera más eficiente posible, minimizando costos o maximizando el rendimiento sin exceder las limitaciones físicas o presupuestarias.",
+    "context": "TEMA 3 - DDR 2025/2026\n\nÍNDICE\n\nTema 3. Optimización de Red (6 h)\n\nIntroducción a la Optimización Matemática\n\nEjemplo de Routing\n\nResolución con glpk\n\nRequisitos de Entrada\n\nFormulación basada en caminos",
+    "tema": "Tema 3",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema3_2526.pdf",
+    "pagina": 43
+  },
+  {
+    "question": "¿Cuál es el propósito fundamental de utilizar una herramienta de optimización como GLPK en el diseño y dimensionamiento de redes?",
+    "ground_truth": "El propósito principal es modelar problemas complejos de ingeniería, como el enrutamiento de tráfico o la asignación de recursos, traduciéndolos en un problema matemático de optimización. Esto permite encontrar la mejor solución posible (por ejemplo, el costo mínimo o el flujo máximo) que satisfaga todas las restricciones físicas y operacionales de la red.",
+    "context": "TEMA 3 - DDR 2025/2026\n\nRESOLUCIÓN CON GLPK\n\nEjemplo de problema: ¿Cómo encaminar el tráfico?\n\nOctave: función glpk\n\n[XOPT, FMIN, ERRNUM, EXTRA] = glpk (C, A, B, LB, UB, CTYPE)\n\n[ min | max ] C'*x\n\n1\n2\n2\n1\n2\n1\n\n1\n0\n0\n0\n1\n0\n0\n0\n1\n\n0\n1\n0\n1\n0\n0\n0\n0\n1\n1\n1\n1\n0\n0\n1\n0\n1\n0\n\n5\n7\n8\n10\n10\n15\n\nsubject to A*x [ \"=\" | \"<=\" | \">=\" ] b,\n\nx >= LB,\n\nC=\n\nA=\n\nB=\n\n0\n0\n0\n1\n1\n0\n0\n1\n1\n\nx <= UB\n\nCTYPE: [ “S\" | “U\" | “L\" ]\n\nLB = zeros(6,1) UB = Inf*ones(6,1)\n\nSolución: x* = [5 0 0 7 0 8], factible & única\n\nCTYPE = ‘SSSUUU’",
+    "tema": "Tema 3",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema3_2526.pdf",
+    "pagina": 32
+  },
+  {
+    "question": "¿Cuál es el objetivo principal al formular un problema de dimensionamiento de red (FCD) y qué implica la naturaleza de este problema?",
+    "ground_truth": "El objetivo principal es minimizar el costo total de los enlaces necesarios para satisfacer la demanda de tráfico. Este problema es complejo porque requiere encontrar la mejor combinación de módulos de diferentes tipos para cada enlace, asegurando que la capacidad total cumpla con la demanda, lo que lo clasifica como un problema de optimización muy difícil de resolver.",
+    "context": "TEMA 4 - DDR 2025/2026\n\nINTRODUCCIÓN AL DIMENSIONADO\n\nFormulación FCD: Problema de Dimensionamiento por Tipo de Enlace\n\nMinimizar\n\nCtes (entradas)\n\n𝐹𝐹= ෍\n\n𝑘𝑘\n෍\n\n𝑒𝑒\n𝜉𝜉𝑒𝑒,𝑘𝑘𝑦𝑦𝑒𝑒,𝑘𝑘\n\nℎ𝑑𝑑 : demanda (tráfico) d\n\nMIP!!!\nNP Complete!!!\n\n𝛿𝛿𝑒𝑒,𝑑𝑑,𝑝𝑝: 1 si 𝑥𝑥𝑑𝑑,𝑝𝑝 pasa por el enlace e, 0 sino\n𝜉𝜉𝑒𝑒,𝑘𝑘: coste de cada módulos k para e\n\nSujeto a\n\n𝐶𝐶𝑘𝑘: capacidad del módulo 𝑘𝑘\n\n෍\n\n𝑝𝑝\n𝑥𝑥𝑑𝑑,𝑝𝑝= ℎ𝑑𝑑,\n𝑑𝑑= 1, … , 𝐷𝐷\n\nVars (salidas)\n\n𝑥𝑥𝑑𝑑,𝑝𝑝: flujo en camino p para ℎ𝑑𝑑\n\n෍\n\n𝑑𝑑\n෍\n\n𝑝𝑝\n𝛿𝛿𝑒𝑒,𝑑𝑑,𝑝𝑝𝑥𝑥𝑑𝑑,𝑝𝑝≤෍\n\n𝑘𝑘\n𝐶𝐶𝑘𝑘𝑦𝑦𝑒𝑒,𝑘𝑘,\n 𝑒𝑒= 1, … , 𝐸𝐸\n\n𝑦𝑦𝑒𝑒,𝑘𝑘: (entero) # módulos tipo k para \n \n enlace e",
+    "tema": "Tema 4",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema4_2526.pdf",
+    "pagina": 13
+  },
+  {
+    "question": "¿Cuál es el objetivo principal del dimensionamiento de redes en el contexto del Diseño y Dimensionamiento de Redes (DDR)?",
+    "ground_truth": "El objetivo principal es asegurar que la infraestructura de red tenga la capacidad suficiente (ancho de banda, número de puertos, potencia de procesamiento) para soportar la carga de tráfico esperada, tanto actual como futura, garantizando así un rendimiento óptimo y una experiencia de usuario sin cuellos de botella.",
+    "context": "TEMA 4 - DDR 2025/2026\n\nTEMA 4: DIMENSIONADO DE RED\n\nDISEÑO Y DIMENSIONADO DE REDES (DDR)\n\n2025/2026\n\nProf. José Camacho\njosecamacho@ugr.es\nIngenieríaTelemática (TSTC)\n\nhttps://prado.ugr.es/",
+    "tema": "Tema 4",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema4_2526.pdf",
+    "pagina": 1
+  },
+  {
+    "question": "¿Cuál es la relación fundamental entre el diseño de una red y el tráfico que esta debe soportar?",
+    "ground_truth": "El diseño de una red no solo se basa en las capacidades físicas que se instalan, sino que debe estar intrínsecamente ligado a las demandas de tráfico esperadas, ya sean medidas en tiempo real o simuladas teóricamente, para asegurar que la topología elegida pueda soportar el rendimiento requerido.",
+    "context": "TEMA 4 - DDR 2025/2026\n\nDISEÑO DE TOPOLOGÍAS\n\nDiseño de Topología: las capacidades y la topologías son ahora salidas\n\nEntrada\nSalida\n\nTráfico (medido)\n\no \nDemandas \n(simulado/teórico)\n\nSiempre\n\nCapacidades\nEnrutamiento \nDimensionamiento, \nDiseño Topológico\n\nTopología\nEnrutamiento, \nDimensionamiento\nDiseño Topológico\n\nCriterio de Optimalidad \n(Rendimiento)\nSiempre",
+    "tema": "Tema 4",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema4_2526.pdf",
+    "pagina": 20
+  },
+  {
+    "question": "¿Cuál es el objetivo principal al realizar el dimensionamiento de una red?",
+    "ground_truth": "El objetivo principal es asegurar que la infraestructura de red tenga la capacidad suficiente (ancho de banda, número de puertos, etc.) para soportar la carga de trabajo esperada, garantizando que el rendimiento sea adecuado y que la red no colapse bajo el uso normal o pico.",
+    "context": "TEMA 4 - DDR 2025/2026\n\nÍNDICE\n\nTema 4. Dimensionamiento de Red (4 h)\n\nIntroducción al Dimensionado\n\nDimensionado por módulos\n\nBalanceo y Ruta única\n\nDiseño de Topologías\n\nDiseño Robusto",
+    "tema": "Tema 4",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema4_2526.pdf",
+    "pagina": 15
+  },
+  {
+    "question": "¿Qué representa intuitivamente la función de pérdidas del retardo promedio de la red cuando se consideran retardos constantes de procesamiento, propagación y transmisión, y un retardo de cola específico?",
+    "ground_truth": "Esta función nos ayuda a estimar cuánto aumentará el retardo total de la red debido a la congestión (el retardo de cola). En esencia, nos indica que, cuanto más cerca esté la utilización de la red de su capacidad máxima (es decir, cuanto más alto sea el porcentaje de tráfico), mayor será el retardo adicional que experimentarán los datos, acercándose a un límite teórico determinado por el retardo de cola y la utilización.",
+    "context": "TEMA 5 - DDR 2025/2026\n\nEJERCICIOS\n\nDerive la función de pérdidas del retardo promedio de la red \nconsiderando:\n\nQue los retardos de procesamiento, propagación y transmisión son \nconstantes.\n\nQue el retardo de cola es H=0.5\n\n𝜌𝜌𝑒𝑒\n1/2(1−𝐻𝐻)\n\n𝐿𝐿\n𝑦𝑦𝑒𝑒·\n\n𝑇𝑇𝑒𝑒𝑏𝑏≈\n\n(1−𝜌𝜌𝑒𝑒)𝐻𝐻/(1−𝐻𝐻) 𝐻𝐻∈0.5, 1 , \n𝜌𝜌𝑒𝑒= 𝑥𝑥𝑒𝑒/𝑦𝑦𝑒𝑒",
+    "tema": "Tema 5",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema5_2526.pdf",
+    "pagina": 22
+  },
+  {
+    "question": "¿Cuál es el objetivo principal de la Network Telemetry en el contexto de las redes modernas?",
+    "ground_truth": "El objetivo principal es obtener datos de alta calidad de manera eficiente, oportuna y flexible. Esto permite a los administradores monitorear aspectos críticos como la seguridad, asegurar el cumplimiento de políticas y acuerdos de nivel de servicio, y realizar análisis profundos para optimizar la red y predecir problemas.",
+    "context": "TEMA 5 - DDR 2025/2026\n\nREDES AUTÓNOMAS\n\nNetwork Telemetry\n\n“Get enough high-quality data efficiently, timely and flexibly”\n\nUse Cases:\n\nSecurity, Policy and Intent Complicance, SLA Compliance, Root Cause Analysis, Network Optimization, Event \nTracking and Prediction, …\n\nV’s Big Data\n\nVelocity: Real Time\n\nSuscription mejor pooling (pull)\n\nOAM push (traps, NETFLOW) insuficiente\n\nVolume: Comprehensive data\n\nVariability: Data fusion",
+    "tema": "Tema 5",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema5_2526.pdf",
+    "pagina": 11
+  },
+  {
+    "question": "¿Cuál es el objetivo principal de aplicar extensiones en la optimización dentro del Diseño y Dimensionamiento de Redes (DDR)?",
+    "ground_truth": "El objetivo principal es mejorar la eficiencia y la robustez del diseño de la red y su capacidad para manejar cargas futuras o condiciones operativas cambiantes, yendo más allá de un simple cálculo basado en las necesidades actuales.",
+    "context": "TEMA 5 - DDR 2025/2026\n\nTEMA 35 EXTENSIONES EN LA \nOPTIMIZACIÓN\n\nDISEÑO Y DIMENSIONADO DE REDES (DDR)\n\n2025/2026\n\nProf. José Camacho\njosecamacho@ugr.es\nIngenieríaTelemática (TSTC)\n\nhttps://prado.ugr.es/",
+    "tema": "Tema 5",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema5_2526.pdf",
+    "pagina": 46
+  },
+  {
+    "question": "¿Por qué es tan crucial entender la formulación al diseñar redes, incluso cuando se utilizan herramientas avanzadas como la Inteligencia Artificial?",
+    "ground_truth": "La formulación es el paso conceptual más importante porque define exactamente qué problema estamos tratando de resolver. Piensa en ella como el 'mapa' del problema; si el mapa es incorrecto o incompleto, ninguna herramienta, por avanzada que sea (como la IA), podrá encontrar la solución correcta, aunque el cálculo sea perfecto.",
+    "context": "TEMA 5 - DDR 2025/2026\n\nRESUMEN (TAKEAWAY)\n\n“LAS FORMULACIONES SON COMO HERRAMIENTAS EN LA \nCAJA DE HERRAMIENTAS DEL ODR, Y PUEDEN DAR \nRESULTADOS DIFERENTES”\n\n-TAKEAWAYs\n\n“PODEMOS DISEÑAR NUEVAS FORMULACIONES, ANTE \nPROBLEMAS COMPLEJOS”\n\n“LA FORMULACIÓN ES TAN O MÁS IMPORTANTE QUE EL \nSOLVER, INCLUSO AL APLICAR IA”",
+    "tema": "Tema 5",
+    "tipo": "conceptual",
+    "fuente_pdf": "Tema5_2526.pdf",
+    "pagina": 44
+  },
+  {
+    "question": "¿Qué tipo de interacción diseño-negocio se relaciona con el requisito de Amazon de no arriesgar su prestigio debido a una fuga de información sensible?",
+    "ground_truth": "Seguridad",
+    "context": "3. Discuta el tipo de interacción diseño-negocio (seguridad, movilidad, continuidad)\n\n Amazon no quiere arriesgar su prestigio en una fuga de información sensible \n BBVA quiere alta redundancia en su servicio Voz IP \n Norauto quiere poder acceder a videoconferencias usando BYOD \n BMW tiene como requisito fundamental evitar el robo de know-how\n\nAmazon no quiere arriesgar su prestigio en una fuga de información sensible  Seguridad \n \nBBVA quiere alta redundancia en su servicio Voz IP  Continuidad de Negocio \n \nNorauto quiere poder acceder a videoconferencias usando BYOD  Movilidad \n \nBMW tiene como requisito fundamental evitar el robo de know-how  Seguridad",
+    "tema": "Tema 2",
+    "tipo": "ejercicio",
+    "fuente_pdf": "problemas_tema2.pdf",
+    "pagina": ""
+  },
+  {
+    "question": "¿Qué técnica analítica es más adecuada para establecer la capacidad de un enlace inexistente para un servicio nuevo, cuando se tienen valores de QoS requeridos pero no se puede probar en la red real?",
+    "ground_truth": "La técnica más adecuada es la que permite simular o modelar el comportamiento sin afectar la red en producción, lo cual se describe en el caso 'b' del fragmento.",
+    "context": "1. ¿Qué técnica analítica es más adecuada en los siguientes casos?\n\na. Quiero configurar un par de parámetros de OSPF en una red para minimizar el retardo de\n\nun servicio concreto. Puedo probar distintas configuraciones en la red real antes de poner el \nservicio en producción. \nb. Quiero establecer la capacidad de un enlace que no existe, asociado a un servicio nuevo.\n\nTengo valores de QoS requeridos para distintos niveles de uso, pero no puedo probarlo en la \nred real. \nc. Quiero añadir nuevos elementos de conmutación (routers y switches) en una red cuyo tráfico\n\nllevo monitorizando años. \nd. Tengo una predicción de crecimiento en la red de la UGR, medición de su tráfico, y quiero\n\ncalcular el aumento necesario de la capacidad de los enlaces para evitar congestiones. \ne. Quiero configurar de forma óptima 5 parámetros en un dispositivo que desconozco.\n\na. Si el número de valores que queremos evaluar de ese par de parámetros está acotado (por \nejemplo, el primer parámetro puede tomar los valores 1, 3 y 9 y el segundo 2 y 4), considerando \nque podemos evaluar el resultado en la red real, la técnica analítica más adecuada es el Diseño \nEstadístico de Experimentos y Análisis de Resultados. \nb. Dado que es un enlace, y que no puedo probarlo en una red real porque además no existe el \nenlace ni el servicio, la técnica más adecuada es la teoría de colas. \nc. Considerando que es una red, y no un enlace, y que tengo datos históricos para estimar la matriz \nde tráfico, la técnica adecuada es la Optimización Matemática. \nd. De nuevo, considerando que hay datos de tráfico y que es una red completa, la elección sería la \nOptimización Matemática. \ne. Asumiendo que puedo configurar valores específicos en el dispositivo, y medir su rendimiento, \nla forma adecuada es el Diseño de Experimentos y Análisis de Resultados.",
+    "tema": "Tema 3",
+    "tipo": "ejercicio",
+    "fuente_pdf": "problemas_tema3.pdf",
+    "pagina": ""
+  },
+  {
+    "question": "¿Cuál es el cambio específico en la formulación FCD del Problema de Topología para que el OPEX dependa de la cantidad de flujo total en el enlace?",
+    "ground_truth": "Se debe crear una nueva variable de flujo por enlace, lo que lleva a redefinir la función de coste.",
+    "context": "5. Cambie la formulación FCD del Problema de Topología en las transparencias de forma que:\n\na) el OPEX dependa de la cantidad de flujo total en el enlace \nb) el CAPEX dependa del número de módulos \n \n \nLa formulación FCD del Problema de Topología es:\n\n10\n\nDiseño y Dimensionado de Redes\n\nGrado en Ingeniería de Tecnologías de \nTelecomunicación\n\na) Una forma es crear una nueva variable de flujo por enlace, de forma que nos quedan las\n\nrestricciones:\n\nY con esto redefinimos la función de coste a:\n\nb) Simplemente, nos basta con dejar que ue tome cualquier valor entero mayor o igual a 0, y sustituir \nMe por la capacidad de los de los módulos.",
+    "tema": "Tema 4",
+    "tipo": "ejercicio",
+    "fuente_pdf": "problemas_tema4.pdf",
+    "pagina": ""
+  },
+  {
+    "question": "¿Cuál es el objetivo principal al proponer un enrutamiento de mínima congestión basado en la formulación matemática descrita para la topología dada?",
+    "ground_truth": "El objetivo es formular un modelo de programación lineal (basado en FCD) que minimice el coste total del enrutamiento, sujeto a restricciones que aseguren que el tráfico requerido en cada par de nodos (definido por la matriz de tráfico) sea cubierto por los enlaces disponibles, respetando las capacidades máximas de estos enlaces.",
+    "context": "7. \nConsiderando la siguiente topología y matriz de tráfico en Gbps proponga una \nenrutamiento de mínima congestión. Las capacidades de los enlaces son 200, 100, 200, 100, 100 y \n50 Gbps.\n\nIncluya:\n\n• \nla definición completa de variables\n\n• \nla función de coste\n\n• \nlas restricciones de igualdad que dejan como término independiente los valores en las \nposiciones (1,3), (2,1) y (3,1) en la matriz de tráfico y\n\n• \nlas restricciones de desigualdad de los enlaces 5 y 4.\n\nConsidere la formulación matemática basada en FCD. Especificar valores numéricos donde se \npueda. Especifique las matrices A, B y C para su solución en el solver glpk.\n\n50\n100\n0\n\n\n=\n\n\n\n\n\n\n\n\n\n\n\n10\n0\n66\n\nH\n\n0\n47\n150\n\n\n\n\n\n12\n\nDiseño y Dimensionado de Redes\n\nGrado en Ingeniería de Tecnologías de \nTelecomunicación",
+    "tema": "Tema 5",
+    "tipo": "ejercicio",
+    "fuente_pdf": "problemas_tema5.pdf",
+    "pagina": ""
+  }
+]

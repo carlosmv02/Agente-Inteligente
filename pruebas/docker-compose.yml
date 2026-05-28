@@ -1,0 +1,46 @@
+services:
+  ollama:
+    image: ollama/ollama:0.21.0
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    environment:
+      OLLAMA_DEBUG: "0"
+      OLLAMA_KEEP_ALIVE: "-1"
+
+  rag:
+    build: .
+    environment:
+      CHROMA_PATH: /app/chroma_ddr
+      LLM_PROVIDER: ${LLM_PROVIDER:-ollama}
+      OLLAMA_MODEL: gemma4
+      OLLAMA_URL: http://ollama:11434
+      RAGAS_TIMEOUT: 1200
+      RAGAS_MAX_WORKERS: 1
+      RAGAS_METRICS: faithfulness,answer_relevancy,context_precision,context_recall
+      EVAL_RUN_RAGAS: 0
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-5-mini}
+      OPENAI_JUDGE_MODEL: ${OPENAI_JUDGE_MODEL:-gpt-5-mini}
+    volumes:
+      - ./rag_answer.py:/app/rag_answer.py:ro
+      - ./genera_examen.py:/app/genera_examen.py:ro
+      - ./evaluate_rag.py:/app/evaluate_rag.py:ro
+      - ./evaluate_rag_openai.py:/app/evaluate_rag_openai.py:ro
+      - ./evaluate_rag_prompt_1.py:/app/evaluate_rag_prompt_1.py:ro
+      - ./evaluate_rag_prompt_2.py:/app/evaluate_rag_prompt_2.py:ro
+      - ./evaluate_rag_sin_pistas.py:/app/evaluate_rag_sin_pistas.py:ro
+      - ./evaluate_rag_sin_contexto_pagina.py:/app/evaluate_rag_sin_contexto_pagina.py:ro
+      - ./evaluate_rag_top_k.py:/app/evaluate_rag_top_k.py:ro
+      - ./evaluate_rag_conjunto.py:/app/evaluate_rag_conjunto.py:ro
+      - ./tests:/app/tests
+      - ./resultados:/app/resultados
+      - ./pruebas-adicionales:/app/pruebas-adicionales
+    stdin_open: true
+    tty: true
+    depends_on:
+      - ollama
+
+volumes:
+  ollama_data: {}

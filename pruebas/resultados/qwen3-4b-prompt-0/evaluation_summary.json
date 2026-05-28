@@ -1,0 +1,40 @@
+{
+  "num_questions": 24,
+  "configured_llm_provider": "ollama",
+  "configured_llm_model": "qwen3:4b",
+  "top_k": 6,
+  "use_testset_hints": true,
+  "attach_page_context": true,
+  "generation_max_tokens": 1200,
+  "result_llm_providers": [
+    "ollama"
+  ],
+  "result_llm_models": [
+    "qwen3:4b"
+  ],
+  "wall_time_s": 7720.003,
+  "recorded_pipeline_time_s": 7719.979,
+  "avg_time_per_response_s": 321.666,
+  "avg_retrieval_time_s": 0.1482,
+  "avg_generation_time_s": 321.5173,
+  "avg_answer_ground_truth_similarity": 0.1133,
+  "avg_answer_context_similarity": 0.1092,
+  "avg_ground_truth_context_similarity": 0.822,
+  "avg_same_tema_ratio": 1.0,
+  "avg_same_pdf_ratio": 0.993,
+  "same_page_hit_rate": 0.958,
+  "insufficient_context_answers": 0,
+  "insufficient_context_rate": 0.0,
+  "avg_context_count": 7.2083,
+  "avg_context_chars": 4399.6667,
+  "avg_answer_words": 12.4167,
+  "avg_prompt_tokens_ollama": 2046.25,
+  "avg_completion_tokens_ollama": 1156.5417,
+  "avg_ollama_total_duration_s": 321.4998,
+  "avg_input_tokens_openai": null,
+  "avg_output_tokens_openai": null,
+  "avg_total_tokens_openai": null,
+  "avg_cpu_user_delta_s": 1.1454,
+  "avg_cpu_system_delta_s": 0.0821,
+  "avg_rss_peak_end_mb": 1674.1704
+}
