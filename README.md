@@ -167,6 +167,20 @@ Lanzar el asistente:
 docker compose run --rm -it rag
 ```
 
+No hay que indicar el LLM como argumento del comando. El asistente lee el
+proveedor y el modelo desde variables de entorno. Con Docker Compose se usan por
+defecto `LLM_PROVIDER=ollama` y `OLLAMA_MODEL=gemma4`.
+
+Si se quiere dejar explicito en el comando, o cambiar el modelo, se pueden pasar
+las variables con `-e`, igual que en los scripts de pruebas:
+
+```bash
+docker compose run --rm -it \
+  -e LLM_PROVIDER=ollama \
+  -e OLLAMA_MODEL=gemma4 \
+  rag
+```
+
 Tambien se puede indicar el script explicitamente:
 
 ```bash
@@ -198,6 +212,10 @@ Ejecutar el asistente:
 ```bash
 LLM_PROVIDER=ollama python rag_answer.py
 ```
+
+En local tambien se configura el LLM mediante variables de entorno, no con un
+parametro del script. Si no se define `LLM_PROVIDER`, `rag_answer.py` usa
+`openai` por defecto, asi que para Ollama conviene indicarlo explicitamente.
 
 Si Ollama esta en otra URL:
 
@@ -312,6 +330,11 @@ docker compose run --rm -e OPENAI_API_KEY rag python evaluate_rag_conjunto.py
 | `OPENAI_MODEL` | `gpt-5-mini` | Modelo OpenAI si se usa proveedor OpenAI. |
 | `TOKENIZERS_PARALLELISM` | `false` | Evita avisos de paralelismo de Transformers. |
 | `TRANSFORMERS_VERBOSITY` | `error` | Reduce ruido de logs del modelo de embeddings. |
+
+El comando del asistente no recibe un parametro `--llm` o similar. Para cambiar
+el motor de generacion se ajustan `LLM_PROVIDER`, `OLLAMA_MODEL` u
+`OPENAI_MODEL`. En Docker Compose se pueden pasar directamente en el comando con
+`-e`, por ejemplo `-e OLLAMA_MODEL=gemma4`.
 
 Por defecto Docker Compose fuerza `LLM_PROVIDER=ollama` para que el asistente
 funcione sin claves externas. Si quieres usar OpenAI en la raiz:
