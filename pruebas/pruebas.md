@@ -3,8 +3,10 @@
 Esta carpeta contiene el entorno usado para probar, comparar y documentar el
 comportamiento del sistema RAG de Diseno y Dimensionado de Redes (DDR). La idea
 es que se pueda ejecutar en otra maquina sin reconstruir todo el corpus desde
-cero: aqui se incluye una copia de la base vectorial `chroma_ddr`, los scripts de
-evaluacion, el testset y los resultados generados.
+cero cuando ya se dispone de la base vectorial `chroma_ddr`. En esta carpeta se
+incluyen los scripts de evaluacion, el testset y los resultados generados. La
+base `chroma_ddr/` es un artefacto generado y puede no estar versionada porque
+esta ignorada por git.
 
 El objetivo de estas pruebas es medir tres partes del sistema:
 
@@ -30,10 +32,64 @@ El objetivo de estas pruebas es medir tres partes del sistema:
 | `evaluate_rag_conjunto.py` | Orquestador que ejecuta las tres pruebas adicionales anteriores. |
 | `tests/testset.json` | Conjunto de preguntas y respuestas de referencia. |
 | `resultados/` | Resultados de evaluaciones ya ejecutadas. |
-| `chroma_ddr/` | Base de datos vectorial persistente usada por las pruebas. |
+| `chroma_ddr/` | Base de datos vectorial persistente usada por las pruebas. Es requerida para ejecutar, pero es un artefacto generado/no versionado. |
+| `pruebas-adicionales/` | Carpeta opcional montada por Docker Compose para artefactos auxiliares locales. Puede no existir hasta que se use. |
 | `Dockerfile` | Imagen del servicio RAG. |
 | `docker-compose.yml` | Levanta Ollama y el contenedor de pruebas. |
 | `requirements.txt` | Dependencias Python del entorno de pruebas. |
+
+## Base Vectorial Requerida
+
+Los scripts de evaluacion cargan siempre la coleccion `ddr_chunks` desde
+`CHROMA_PATH`. Aunque se reutilicen resultados intermedios, `evaluate_rag.py`
+inicializa ChromaDB al arrancar, asi que `chroma_ddr/` debe existir.
+
+El `Dockerfile` de esta carpeta hace:
+
+```dockerfile
+COPY chroma_ddr ./chroma_ddr
+```
+
+Por tanto, antes de construir la imagen de pruebas debe existir
+`pruebas/chroma_ddr/`. Si no existe, hay que regenerar o copiar la base desde la
+raiz del repositorio.
+
+Desde la raiz del repositorio, si `chunks_ddr.jsonl` ya existe:
+
+```bash
+python build_vector_db.py
+```
+
+Si se han cambiado materiales o no existe `chunks_ddr.jsonl`:
+
+```bash
+python main_ingest.py
+python build_vector_db.py
+```
+
+Despues copia la base a la carpeta de pruebas.
+
+En PowerShell, desde la raiz:
+
+```powershell
+New-Item -ItemType Directory -Force .\pruebas\chroma_ddr
+Copy-Item -Recurse -Force .\chroma_ddr\* .\pruebas\chroma_ddr\
+```
+
+En Bash, desde la raiz:
+
+```bash
+mkdir -p pruebas/chroma_ddr
+cp -r chroma_ddr/. pruebas/chroma_ddr/
+```
+
+Si se actualiza `pruebas/chroma_ddr/`, reconstruye la imagen `rag` para que el
+contenedor use la nueva base:
+
+```bash
+cd pruebas
+docker compose build rag
+```
 
 
 ## Preparar El Entorno
@@ -62,8 +118,12 @@ Descargar los modelos locales que se usen:
 docker compose exec ollama ollama pull gemma4
 docker compose exec ollama ollama pull gemma4:e2b
 docker compose exec ollama ollama pull mistral:7b
-...
 ```
+
+Descarga solo los modelos que vayas a ejecutar. Los resultados historicos de
+`resultados/` incluyen ejecuciones con `gemma4:e2b`, `gemma4:e4b`,
+`gemma4:latest`, `mistral:7b`, `qwen3:4b`, `qwen3:8b`, `llama3.1:8b` y
+`gpt-5-mini`.
 
 Si se van a ejecutar pruebas con OpenAI o RAGAS con juez OpenAI, hay que definir
 la clave por variable de entorno. No debe guardarse ninguna clave real en el
@@ -121,10 +181,12 @@ Algunas variables utiles para controlar esa generacion son:
 |---|---|
 | `RAG_EXAM_SEED` | Fija una semilla para repetir el mismo examen. |
 | `RAG_EXAM_PROFILE` | Selecciona un perfil teorico. |
-| `RAG_EXAM_VARIANT` | Selecciona una variante de topologia para la pregunta 4. |
-| `RAG_EXAM_DIMENSION` | Selecciona la opcion de dimensionamiento de la pregunta 4. |
+| `RAG_EXAM_VARIANT` / `RAG_EXAM_SCENARIO` | Selecciona una variante de topologia para la pregunta 4. |
+| `RAG_EXAM_DIMENSION` / `RAG_EXAM_DIMENSIONING` / `RAG_EXAM_DIMENSION_OPTION` | Selecciona la opcion de dimensionamiento de la pregunta 4. |
+| `RAG_EXAM_FORCE_PROFILE` | Si vale `1`/`true`, fuerza las preguntas teoricas del banco interno. |
 | `RAG_EXAM_ONLY_MAX_TOKENS` | Limite de tokens para examen sin solucionario. |
 | `RAG_EXAM_SOLUTION_MAX_TOKENS` | Limite de tokens para solucionario. |
+| `RAG_EXAM_WITH_SOLUTION_MAX_TOKENS` | Alias heredado para el limite del solucionario. |
 
 ## Testset
 
@@ -262,6 +324,11 @@ docker compose run --rm \
   rag python evaluate_rag_openai.py
 ```
 
+`evaluate_rag_openai.py` ejecuta `prompt-0` en `tests/` y despues copia esos
+ficheros a `resultados/<modelo>-prompt-0/`. Los prompts 1 y 2 escriben
+directamente en `resultados/<modelo>-prompt-1/` y
+`resultados/<modelo>-prompt-2/`.
+
 Con RAGAS:
 
 ```bash
@@ -382,29 +449,87 @@ El orquestador guarda un log y un resumen JSON en:
 resultados/conjunto/
 ```
 
+Opciones utiles del orquestador:
+
+```bash
+docker compose run --rm \
+  -e OPENAI_API_KEY \
+  rag python evaluate_rag_conjunto.py --desde top-k
+
+docker compose run --rm \
+  -e OPENAI_API_KEY \
+  rag python evaluate_rag_conjunto.py --solo sin-pistas --solo top-k
+
+docker compose run --rm \
+  -e OPENAI_API_KEY \
+  rag python evaluate_rag_conjunto.py --continuar-si-falla
+```
+
 ## Variables De Entorno Utiles
 
 | Variable | Valor habitual | Uso |
 |---|---|---|
+| `CHROMA_PATH` | `/app/chroma_ddr` | Ruta de la base ChromaDB con la coleccion `ddr_chunks`. |
 | `LLM_PROVIDER` | `ollama` u `openai` | Selecciona proveedor del generador. |
+| `OLLAMA_URL` | `http://ollama:11434` | URL del servidor Ollama. |
 | `OLLAMA_MODEL` | `gemma4`, `gemma4:e2b`, `mistral:7b` | Modelo local. |
 | `OPENAI_MODEL` | `gpt-5-mini` | Modelo OpenAI generador. |
 | `OPENAI_API_KEY` | secreto local | Clave para OpenAI. No se guarda en git. |
+| `OPENAI_REASONING_EFFORT` | `low` | Esfuerzo de razonamiento para modelos OpenAI que lo soportan. |
 | `EVAL_TESTSET_FILE` | `tests/testset.json` | Testset a evaluar. |
 | `EVAL_OUTPUT_DIR` | ruta | Carpeta de salida personalizada. |
 | `EVAL_REUSE_RAW_RESULTS` | `1` o `0` | Reutiliza o regenera respuestas. |
 | `EVAL_RUN_RAGAS` | `0` o `1` | Activa metricas RAGAS. |
+| `EVAL_OPENAI_EMPTY_RETRY_MAX_TOKENS` | `4000` | Segundo intento si OpenAI devuelve respuesta sin texto visible. |
 | `RAGAS_JUDGE_PROVIDER` | `ollama` u `openai` | Proveedor del juez RAGAS. |
 | `OPENAI_JUDGE_MODEL` | `gpt-5-mini` | Modelo OpenAI usado como juez. |
 | `OLLAMA_JUDGE_MODEL` | modelo local | Modelo Ollama usado como juez. |
 | `RAGAS_METRICS` | lista separada por comas | Metricas RAGAS a ejecutar. |
 | `RAGAS_TIMEOUT` | `1200` | Timeout por llamada RAGAS. |
 | `RAGAS_MAX_WORKERS` | `1` o `2` | Paralelismo de RAGAS. |
+| `RAGAS_MAX_RETRIES` | `3` | Reintentos maximos de RAGAS. |
 | `RAGAS_SAMPLE_SIZE` | `0` | Si es mayor que 0, evalua RAGAS solo en una muestra. |
 | `EVAL_TOP_K` / `TOP_K` | `6` | Numero de chunks recuperados. |
 | `EVAL_USE_TESTSET_HINTS` | `1` | Usa metadatos del testset para filtrar recuperacion. |
 | `EVAL_ATTACH_PAGE_CONTEXT` | `1` | Anade contexto adicional de la misma pagina. |
 | `EVAL_MAX_OUTPUT_TOKENS` | `1200` o `2000` | Limite de generacion. |
+| `TESTSET_MAX_RETRIES` | `3` | Reintentos al generar cada ejemplo del testset. |
+| `TOKENIZERS_PARALLELISM` | `false` | Evita avisos de paralelismo de Transformers. |
+| `TRANSFORMERS_VERBOSITY` | `error` | Reduce ruido de logs de Transformers. |
+
+## Problemas Habituales
+
+### Falla `COPY chroma_ddr`
+
+Si `docker compose build` falla porque no encuentra `chroma_ddr`, crea o copia
+primero `pruebas/chroma_ddr/` siguiendo la seccion **Base Vectorial Requerida**.
+
+### No Existe La Coleccion `ddr_chunks`
+
+Significa que `CHROMA_PATH` apunta a una carpeta vacia o a una base incorrecta.
+Regenera la base, copiala a `pruebas/chroma_ddr/` y reconstruye la imagen.
+
+### Falta `OPENAI_API_KEY`
+
+Las pruebas con generador OpenAI o RAGAS con juez OpenAI necesitan pasar la clave
+al contenedor:
+
+```bash
+docker compose run --rm \
+  -e OPENAI_API_KEY \
+  rag python evaluate_rag.py
+```
+
+### Se Reutilizan Resultados Antiguos
+
+`evaluate_rag.py` reutiliza `rag_pipeline_results.json` si coincide el proveedor,
+el modelo y el testset. Para regenerar respuestas, usa:
+
+```bash
+docker compose run --rm \
+  -e EVAL_REUSE_RAW_RESULTS=0 \
+  rag python evaluate_rag.py
+```
 
 ## Ejecutar Pruebas Largas
 
@@ -467,5 +592,3 @@ docker compose run --rm \
   -e OPENAI_API_KEY \
   rag python evaluate_rag_conjunto.py
 ```
-
-
